@@ -5,8 +5,8 @@ class Program
 {
     static void Main()
     {
-        string inputPath = "BacVaoRa.INP";
-        string outputPath = "BacVaoRa.OUT";
+        string inputPath = "BacVaoRa.INP.txt";
+        string outputPath = "BacVaoRa.OUT.txt";
 
         int n;
         int[,] matrix;
@@ -40,7 +40,7 @@ class Program
                     inDegree += matrix[j, i];  // bậc vào
                 }
 
-                writer.WriteLine($"{outDegree} {inDegree}");
+                writer.WriteLine($"{inDegree} {outDegree}");
             }
         }
 
