@@ -16,7 +16,6 @@ class Program
         using (StreamReader reader = new StreamReader(inputPath))
         {
             n = int.Parse(reader.ReadLine()?.Trim() ?? "0");
-
             adj = new List<int>[n + 1];
             reverseAdj = new List<int>[n + 1];
 
@@ -25,25 +24,58 @@ class Program
                 adj[i] = new List<int>();
                 reverseAdj[i] = new List<int>();
 
-                string line = reader.ReadLine()?.Trim() ?? "";
+                string? line = reader.ReadLine();
+
+                // Nếu thiếu dòng → cảnh báo
+                if (line == null)
+                {
+                    Console.WriteLine($"⚠ Cảnh báo: Dữ liệu thiếu dòng thứ {i}");
+                    continue;
+                }
+
+                line = line.Trim();
                 if (line != "")
                 {
-                    string[] neighbors = line.Split();
-                    foreach (var token in neighbors)
+                    string[] tokens = line.Split();
+
+                    // Bắt lỗi
+                    Console.WriteLine($"🔍 Đang xử lý đỉnh {i} với dữ liệu: '{line}'");
+
+                    foreach (var token in tokens)
                     {
-                        int v = int.Parse(token);
-                        adj[i].Add(v);             // Gốc → Đích
-                        reverseAdj[v].Add(i);      // Đảo chiều: Đích → Gốc
+                        if (int.TryParse(token, out int v))
+                        {
+                            adj[i].Add(v);
+
+                            // Kiểm tra kỹ trước khi truy cập reverseAdj[v]
+                            if (v >= 1 && v <= n)
+                            {
+                                if (reverseAdj[v] == null)
+                                {
+                                    reverseAdj[v] = new List<int>();
+                                }
+                                reverseAdj[v].Add(i);
+                            }
+                            else
+                            {
+                                Console.WriteLine($"⚠ Cảnh báo: Đỉnh v={v} ở dòng {i} vượt phạm vi 1..{n} (bỏ qua)");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"⚠ Token '{token}' ở dòng {i} không hợp lệ.");
+                        }
                     }
+
                 }
             }
         }
 
-        // Hàm kiểm tra BFS có đi được hết không
+        // Kiểm tra duyệt hết đồ thị từ 1
         bool IsReachable(List<int>[] graph, int start, int nodeCount)
         {
             bool[] visited = new bool[nodeCount + 1];
-            Queue<int> q = new Queue<int>();
+            Queue<int> q = new();
             q.Enqueue(start);
             visited[start] = true;
 
@@ -60,26 +92,18 @@ class Program
                 }
             }
 
-            // Kiểm tra tất cả đỉnh đều được thăm
             for (int i = 1; i <= nodeCount; i++)
-            {
-                if (!visited[i])
-                    return false;
-            }
+                if (!visited[i]) return false;
 
             return true;
         }
 
-        // BFS cả 2 chiều
-        bool forwardOK = IsReachable(adj, 1, n);        // Gốc → Đích
-        bool backwardOK = IsReachable(reverseAdj, 1, n); // Đích → Gốc
+        bool forwardOK = IsReachable(adj, 1, n);
+        bool backwardOK = IsReachable(reverseAdj, 1, n);
 
         using (StreamWriter writer = new StreamWriter(outputPath))
         {
-            if (forwardOK && backwardOK)
-                writer.WriteLine("YES");
-            else
-                writer.WriteLine("NO");
+            writer.WriteLine(forwardOK && backwardOK ? "YES" : "NO");
         }
 
         Console.WriteLine("Đã kiểm tra liên thông và ghi kết quả.");

@@ -10,25 +10,25 @@ class Program
         string outputPath = "DSKe2Canh.OUT.txt";
 
         int n;
-        List<int>[] adj;
+        List<int>[] reverseAdj;
 
         using (StreamReader reader = new StreamReader(inputPath))
         {
             n = int.Parse(reader.ReadLine() ?? "0");
-            adj = new List<int>[n + 1];
-
+            reverseAdj = new List<int>[n + 1];
             for (int i = 1; i <= n; i++)
+                reverseAdj[i] = new List<int>();
+
+            for (int u = 1; u <= n; u++)
             {
                 string line = reader.ReadLine() ?? "";
-                adj[i] = new List<int>();
-
                 if (line.Trim() == "") continue;
 
                 string[] tokens = line.Trim().Split();
                 foreach (string token in tokens)
                 {
                     int v = int.Parse(token);
-                    adj[i].Add(v);
+                    reverseAdj[v].Add(u); // Đảo chiều: đỉnh v nhận cạnh từ u
                 }
             }
         }
@@ -38,10 +38,10 @@ class Program
             writer.WriteLine(n);
             for (int i = 1; i <= n; i++)
             {
-                writer.WriteLine(string.Join(" ", adj[i]));
+                writer.WriteLine(string.Join(" ", reverseAdj[i]));
             }
         }
 
-        Console.WriteLine("✅ Đã chuyển danh sách kề sang danh sách cạnh (theo dạng dòng).");
+        Console.WriteLine("Đã đảo chiều danh sách kề thành danh sách các đỉnh đi vào mỗi đỉnh.");
     }
 }

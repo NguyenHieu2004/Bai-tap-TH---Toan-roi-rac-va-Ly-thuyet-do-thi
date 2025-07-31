@@ -1,0 +1,15 @@
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\bin\Debug\net9.0\Bai4.exe
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\bin\Debug\net9.0\Bai4.deps.json
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\bin\Debug\net9.0\Bai4.runtimeconfig.json
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\bin\Debug\net9.0\Bai4.dll
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\bin\Debug\net9.0\Bai4.pdb
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\obj\Debug\net9.0\Bai4.GeneratedMSBuildEditorConfig.editorconfig
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\obj\Debug\net9.0\Bai4.AssemblyInfoInputs.cache
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\obj\Debug\net9.0\Bai4.AssemblyInfo.cs
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\obj\Debug\net9.0\Bai4.csproj.CoreCompileInputs.cache
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\obj\Debug\net9.0\Bai4.sourcelink.json
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\obj\Debug\net9.0\Bai4.dll
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\obj\Debug\net9.0\refint\Bai4.dll
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\obj\Debug\net9.0\Bai4.pdb
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\obj\Debug\net9.0\Bai4.genruntimeconfig.cache
+D:\HieuNguyen\Đại học\Năm 3\HK TC\TH Toán rời rạc và Lý thuyết đồ thị\TH-TRRVLTDT\Buoi4\Bai4\obj\Debug\net9.0\ref\Bai4.dll
